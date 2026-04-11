@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Temperatury</title>
+</head>
+<body>
+
+<h2>Dodaj temperaturę</h2>
+
+<input type="number" id="temp" step="0.1">
+<button onclick="sendTemp()">Wyślij</button>
+
+<p id="status"></p>
+
+<script>
+    async function sendTemp() {
+        const temp = document.getElementById("temp").value;
+
+        const res = await fetch("http://localhost:3000/dodaj", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                temperatura: Number(temp)
+            })
+        });
+
+        const text = await res.text();
+        document.getElementById("status").innerText = text;
+    }
+</script>
+</body>
