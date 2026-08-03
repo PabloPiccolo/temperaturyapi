@@ -31,15 +31,16 @@ public class PomiarController {
     @PostMapping("/dodaj")
     public String dodaj(@RequestBody Pomiar p) {
         logger.info("Próba dodania pomiaru: {}", p.getTemperatura());
-        if (p.getTemperatura() < -100 || p.getTemperatura() > 100) {
-            return "Nieprawidlowa temperatura";
-        }
 
-        if (p.getDataPomiaru() == null) {
-            p.setDataPomiaru(LocalDateTime.now());
-        }
+if (p.getTemperatura() < -100 || p.getTemperatura() > 100) {
+    logger.warn("Odrzucono nieprawidłową temperaturę: {}", p.getTemperatura());
+    return "Nieprawidlowa temperatura";
+}
 
-        repo.save(p);
-        return "OK";
+repo.save(p);
+
+logger.info("Pomiar zapisany do bazy danych. ID: {}", p.getId());
+
+return "OK";
     }
 }
