@@ -8,7 +8,8 @@
 
 <h2>Dodaj temperaturę</h2>
 
-<input type="number" id="temp" step="0.1">
+<input type="number" id="temp" step="0.1" placeholder="Podaj temperaturę">
+<input type="password" id="apikey" placeholder="Podaj klucz" >
 <button onclick="sendTemp()">Wyślij</button>
 
 <p id="status"></p>
@@ -16,11 +17,13 @@
 <script>
     async function sendTemp() {
         const temp = document.getElementById("temp").value;
+        const apiKey = document.getElementById("apikey").value;
 
-        const res = await fetch("http://localhost:3000/dodaj", {
+        const res = await fetch("https://improved-space-orbit-5vqqxgr66p7phpg7-3000.app.github.dev/dodaj", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "X-API-Key": apiKey
             },
             body: JSON.stringify({
                 temperatura: Number(temp)
