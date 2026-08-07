@@ -1,0 +1,947 @@
+2026-08-03T12:23:57.561Z  INFO 17736 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Starting TemperaturyapiApplication using Java 25.0.2 with PID 17736 (/workspaces/temperaturyapi/temperaturyapi/target/classes started by codespace in /workspaces/temperaturyapi/temperaturyapi)
+2026-08-03T12:23:57.566Z  INFO 17736 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-08-03T12:23:58.144Z  INFO 17736 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-03T12:23:58.181Z  INFO 17736 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interface.
+2026-08-03T12:23:58.551Z  INFO 17736 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 3000 (http)
+2026-08-03T12:23:58.562Z  INFO 17736 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-03T12:23:58.563Z  INFO 17736 --- [temperaturyapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-08-03T12:23:58.593Z  INFO 17736 --- [temperaturyapi] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 957 ms
+2026-08-03T12:23:58.749Z  INFO 17736 --- [temperaturyapi] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-03T12:23:58.783Z  INFO 17736 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-08-03T12:23:59.122Z  INFO 17736 --- [temperaturyapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-03T12:23:59.197Z  INFO 17736 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-03T12:24:00.362Z  WARN 17736 --- [temperaturyapi] [main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 1045, SQLState: 28000
+2026-08-03T12:24:00.362Z  WARN 17736 --- [temperaturyapi] [main] org.hibernate.orm.jdbc.error             : Access denied for user 'sql7762232'@'20.61.127.55' (using password: YES)
+2026-08-03T12:24:00.363Z  WARN 17736 --- [temperaturyapi] [main] org.hibernate.orm.jdbc                   : HHH100046: Could not obtain connection to query JDBC database metadata
+
+org.hibernate.exception.AuthException: Unable to obtain isolated JDBC connection [Access denied for user 'sql7762232'@'20.61.127.55' (using password: YES)] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:87) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.5.jar:4.0.5]
+	at com.example.temperaturyapi.TemperaturyapiApplication.main(TemperaturyapiApplication.java:12) ~[classes/:na]
+Caused by: java.sql.SQLException: Access denied for user 'sql7762232'@'20.61.127.55' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	... 37 common frames omitted
+
+2026-08-03T12:24:00.367Z ERROR 17736 --- [temperaturyapi] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-08-03T12:24:00.368Z  WARN 17736 --- [temperaturyapi] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-08-03T12:24:00.373Z  INFO 17736 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-08-03T12:24:00.387Z  INFO 17736 --- [temperaturyapi] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-03T12:24:00.398Z ERROR 17736 --- [temperaturyapi] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.5.jar:4.0.5]
+	at com.example.temperaturyapi.TemperaturyapiApplication.main(TemperaturyapiApplication.java:12) ~[classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:273) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.6.jar:7.0.6]
+	... 15 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:190) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:86) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:200) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:452) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	... 31 common frames omitted
+
+2026-08-03T12:26:02.552Z  INFO 18789 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Starting TemperaturyapiApplication using Java 25.0.2 with PID 18789 (/workspaces/temperaturyapi/temperaturyapi/target/classes started by codespace in /workspaces/temperaturyapi/temperaturyapi)
+2026-08-03T12:26:02.555Z  INFO 18789 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-08-03T12:26:03.534Z  INFO 18789 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-03T12:26:03.603Z  INFO 18789 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interface.
+2026-08-03T12:26:03.985Z  INFO 18789 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 3000 (http)
+2026-08-03T12:26:03.996Z  INFO 18789 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-03T12:26:03.997Z  INFO 18789 --- [temperaturyapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-08-03T12:26:04.031Z  INFO 18789 --- [temperaturyapi] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1293 ms
+2026-08-03T12:26:04.184Z  INFO 18789 --- [temperaturyapi] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-03T12:26:04.222Z  INFO 18789 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-08-03T12:26:04.570Z  INFO 18789 --- [temperaturyapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-03T12:26:04.601Z  INFO 18789 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-03T12:26:05.804Z  WARN 18789 --- [temperaturyapi] [main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 1045, SQLState: 28000
+2026-08-03T12:26:05.805Z  WARN 18789 --- [temperaturyapi] [main] org.hibernate.orm.jdbc.error             : Access denied for user 'sql7762232'@'20.61.127.55' (using password: YES)
+2026-08-03T12:26:05.806Z  WARN 18789 --- [temperaturyapi] [main] org.hibernate.orm.jdbc                   : HHH100046: Could not obtain connection to query JDBC database metadata
+
+org.hibernate.exception.AuthException: Unable to obtain isolated JDBC connection [Access denied for user 'sql7762232'@'20.61.127.55' (using password: YES)] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:87) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.5.jar:4.0.5]
+	at com.example.temperaturyapi.TemperaturyapiApplication.main(TemperaturyapiApplication.java:12) ~[classes/:na]
+Caused by: java.sql.SQLException: Access denied for user 'sql7762232'@'20.61.127.55' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	... 37 common frames omitted
+
+2026-08-03T12:26:05.809Z ERROR 18789 --- [temperaturyapi] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-08-03T12:26:05.810Z  WARN 18789 --- [temperaturyapi] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-08-03T12:26:05.813Z  INFO 18789 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-08-03T12:26:05.823Z  INFO 18789 --- [temperaturyapi] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-03T12:26:05.833Z ERROR 18789 --- [temperaturyapi] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.5.jar:4.0.5]
+	at com.example.temperaturyapi.TemperaturyapiApplication.main(TemperaturyapiApplication.java:12) ~[classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:273) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.6.jar:7.0.6]
+	... 15 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:190) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:86) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:200) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:452) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	... 31 common frames omitted
+
+2026-08-03T12:27:03.505Z  INFO 19590 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Starting TemperaturyapiApplication using Java 25.0.2 with PID 19590 (/workspaces/temperaturyapi/temperaturyapi/target/classes started by codespace in /workspaces/temperaturyapi/temperaturyapi)
+2026-08-03T12:27:03.510Z  INFO 19590 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-08-03T12:27:04.224Z  INFO 19590 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-03T12:27:04.260Z  INFO 19590 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interface.
+2026-08-03T12:27:04.614Z  INFO 19590 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 3000 (http)
+2026-08-03T12:27:04.625Z  INFO 19590 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-03T12:27:04.625Z  INFO 19590 --- [temperaturyapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-08-03T12:27:04.655Z  INFO 19590 --- [temperaturyapi] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 977 ms
+2026-08-03T12:27:04.834Z  INFO 19590 --- [temperaturyapi] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-03T12:27:04.863Z  INFO 19590 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-08-03T12:27:05.187Z  INFO 19590 --- [temperaturyapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-03T12:27:05.225Z  INFO 19590 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-03T12:27:06.401Z  WARN 19590 --- [temperaturyapi] [main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 1045, SQLState: 28000
+2026-08-03T12:27:06.401Z  WARN 19590 --- [temperaturyapi] [main] org.hibernate.orm.jdbc.error             : Access denied for user 'sql7762232'@'20.61.127.55' (using password: YES)
+2026-08-03T12:27:06.402Z  WARN 19590 --- [temperaturyapi] [main] org.hibernate.orm.jdbc                   : HHH100046: Could not obtain connection to query JDBC database metadata
+
+org.hibernate.exception.AuthException: Unable to obtain isolated JDBC connection [Access denied for user 'sql7762232'@'20.61.127.55' (using password: YES)] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:87) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.5.jar:4.0.5]
+	at com.example.temperaturyapi.TemperaturyapiApplication.main(TemperaturyapiApplication.java:12) ~[classes/:na]
+Caused by: java.sql.SQLException: Access denied for user 'sql7762232'@'20.61.127.55' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.6.0.jar:9.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	... 37 common frames omitted
+
+2026-08-03T12:27:06.406Z ERROR 19590 --- [temperaturyapi] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-08-03T12:27:06.407Z  WARN 19590 --- [temperaturyapi] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-08-03T12:27:06.410Z  INFO 19590 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-08-03T12:27:06.419Z  INFO 19590 --- [temperaturyapi] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-03T12:27:06.430Z ERROR 19590 --- [temperaturyapi] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.6.jar:7.0.6]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.5.jar:4.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.5.jar:4.0.5]
+	at com.example.temperaturyapi.TemperaturyapiApplication.main(TemperaturyapiApplication.java:12) ~[classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:273) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.6.jar:7.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.6.jar:7.0.6]
+	... 15 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:190) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:86) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:200) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:452) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.2.7.Final.jar:7.2.7.Final]
+	... 31 common frames omitted
+
+2026-08-03T12:29:30.836Z  INFO 20834 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Starting TemperaturyapiApplication using Java 25.0.2 with PID 20834 (/workspaces/temperaturyapi/temperaturyapi/target/classes started by codespace in /workspaces/temperaturyapi/temperaturyapi)
+2026-08-03T12:29:30.840Z  INFO 20834 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-08-03T12:29:31.468Z  INFO 20834 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-03T12:29:31.503Z  INFO 20834 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interface.
+2026-08-03T12:29:31.889Z  INFO 20834 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 3000 (http)
+2026-08-03T12:29:31.900Z  INFO 20834 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-03T12:29:31.900Z  INFO 20834 --- [temperaturyapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-08-03T12:29:31.929Z  INFO 20834 --- [temperaturyapi] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1021 ms
+2026-08-03T12:29:32.074Z  INFO 20834 --- [temperaturyapi] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-03T12:29:32.105Z  INFO 20834 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-08-03T12:29:32.423Z  INFO 20834 --- [temperaturyapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-03T12:29:32.458Z  INFO 20834 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-03T12:29:32.673Z  INFO 20834 --- [temperaturyapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70697478
+2026-08-03T12:29:32.675Z  INFO 20834 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-03T12:29:32.723Z  WARN 20834 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.62 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-08-03T12:29:32.747Z  INFO 20834 --- [temperaturyapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://sql7.freesqldatabase.com:3306/sql7762232?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.62
+	Default catalog/schema: sql7762232/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-03T12:29:33.270Z  INFO 20834 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-03T12:29:33.351Z  INFO 20834 --- [temperaturyapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-03T12:29:33.466Z  INFO 20834 --- [temperaturyapi] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-03T12:29:33.554Z  WARN 20834 --- [temperaturyapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-03T12:29:33.569Z  INFO 20834 --- [temperaturyapi] [main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-08-03T12:29:33.794Z  INFO 20834 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 3000 (http) with context path '/'
+2026-08-03T12:29:33.800Z  INFO 20834 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Started TemperaturyapiApplication in 3.337 seconds (process running for 3.693)
+2026-08-03T12:34:09.259Z  INFO 20834 --- [temperaturyapi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-03T12:34:09.261Z  INFO 20834 --- [temperaturyapi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-03T12:34:09.265Z  INFO 20834 --- [temperaturyapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-03T12:34:09.268Z  INFO 20834 --- [temperaturyapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-03T12:34:09.273Z  INFO 20834 --- [temperaturyapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-03T12:34:18.678Z  INFO 23057 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Starting TemperaturyapiApplication using Java 25.0.2 with PID 23057 (/workspaces/temperaturyapi/temperaturyapi/target/classes started by codespace in /workspaces/temperaturyapi/temperaturyapi)
+2026-08-03T12:34:18.682Z  INFO 23057 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-08-03T12:34:19.366Z  INFO 23057 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-03T12:34:19.404Z  INFO 23057 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interface.
+2026-08-03T12:34:19.822Z  INFO 23057 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 3000 (http)
+2026-08-03T12:34:19.837Z  INFO 23057 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-03T12:34:19.837Z  INFO 23057 --- [temperaturyapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-08-03T12:34:19.878Z  INFO 23057 --- [temperaturyapi] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1136 ms
+2026-08-03T12:34:20.042Z  INFO 23057 --- [temperaturyapi] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-03T12:34:20.073Z  INFO 23057 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-08-03T12:34:20.417Z  INFO 23057 --- [temperaturyapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-03T12:34:20.452Z  INFO 23057 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-03T12:34:20.673Z  INFO 23057 --- [temperaturyapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78f5cbc5
+2026-08-03T12:34:20.674Z  INFO 23057 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-03T12:34:20.724Z  WARN 23057 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.62 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-08-03T12:34:20.747Z  INFO 23057 --- [temperaturyapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://sql7.freesqldatabase.com:3306/sql7762232?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.62
+	Default catalog/schema: sql7762232/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-03T12:34:21.298Z  INFO 23057 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-03T12:34:21.394Z  INFO 23057 --- [temperaturyapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-03T12:34:21.458Z  INFO 23057 --- [temperaturyapi] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-03T12:34:21.546Z  WARN 23057 --- [temperaturyapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-03T12:34:21.562Z  INFO 23057 --- [temperaturyapi] [main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-08-03T12:34:21.781Z  INFO 23057 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 3000 (http) with context path '/'
+2026-08-03T12:34:21.786Z  INFO 23057 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Started TemperaturyapiApplication in 3.728 seconds (process running for 4.338)
+2026-08-03T12:34:34.087Z  INFO 23057 --- [temperaturyapi] [http-nio-3000-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030x07l4^0x050x1b0xd01dU'0xdd0xe7060xe3y0xa80x160xe1Z0xbe\0xe10xac0xe0w0x0f0x7f.0x10j ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:391) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+
+2026-08-03T12:34:45.454Z  INFO 23057 --- [temperaturyapi] [http-nio-3000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-03T12:34:45.455Z  INFO 23057 --- [temperaturyapi] [http-nio-3000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-03T12:34:45.458Z  INFO 23057 --- [temperaturyapi] [http-nio-3000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-08-03T12:34:45.525Z  INFO 23057 --- [temperaturyapi] [http-nio-3000-exec-2] c.e.t.controller.PomiarController        : Pobrano listę pomiarów.
+2026-08-03T12:34:49.022Z  INFO 23057 --- [temperaturyapi] [http-nio-3000-exec-3] c.e.t.controller.PomiarController        : Pobrano listę pomiarów.
+2026-08-03T12:35:12.646Z  INFO 23057 --- [temperaturyapi] [http-nio-3000-exec-4] c.e.t.controller.PomiarController        : Próba dodania pomiaru: 33.0
+2026-08-03T12:35:23.777Z  INFO 23057 --- [temperaturyapi] [http-nio-3000-exec-5] c.e.t.controller.PomiarController        : Pobrano listę pomiarów.
+2026-08-03T12:49:47.866Z  INFO 23057 --- [temperaturyapi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-03T12:49:47.871Z  INFO 23057 --- [temperaturyapi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-03T12:49:47.874Z  INFO 23057 --- [temperaturyapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-03T12:49:47.876Z  INFO 23057 --- [temperaturyapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-03T12:49:47.882Z  INFO 23057 --- [temperaturyapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-03T12:49:56.976Z  INFO 30625 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Starting TemperaturyapiApplication using Java 25.0.2 with PID 30625 (/workspaces/temperaturyapi/temperaturyapi/target/classes started by codespace in /workspaces/temperaturyapi/temperaturyapi)
+2026-08-03T12:49:56.980Z  INFO 30625 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-08-03T12:49:57.670Z  INFO 30625 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-03T12:49:57.707Z  INFO 30625 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interface.
+2026-08-03T12:49:58.119Z  INFO 30625 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 3000 (http)
+2026-08-03T12:49:58.131Z  INFO 30625 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-03T12:49:58.131Z  INFO 30625 --- [temperaturyapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-08-03T12:49:58.162Z  INFO 30625 --- [temperaturyapi] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1121 ms
+2026-08-03T12:49:58.309Z  INFO 30625 --- [temperaturyapi] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-03T12:49:58.341Z  INFO 30625 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-08-03T12:49:58.661Z  INFO 30625 --- [temperaturyapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-03T12:49:58.691Z  INFO 30625 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-03T12:49:58.950Z  INFO 30625 --- [temperaturyapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70ee1963
+2026-08-03T12:49:58.952Z  INFO 30625 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-03T12:49:58.999Z  WARN 30625 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.62 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-08-03T12:49:59.024Z  INFO 30625 --- [temperaturyapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://sql7.freesqldatabase.com:3306/sql7762232?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.62
+	Default catalog/schema: sql7762232/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-03T12:49:59.644Z  INFO 30625 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-03T12:49:59.731Z  INFO 30625 --- [temperaturyapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-03T12:49:59.818Z  INFO 30625 --- [temperaturyapi] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-03T12:49:59.909Z  WARN 30625 --- [temperaturyapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-03T12:49:59.934Z  INFO 30625 --- [temperaturyapi] [main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-08-03T12:50:00.176Z  INFO 30625 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 3000 (http) with context path '/'
+2026-08-03T12:50:00.180Z  INFO 30625 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Started TemperaturyapiApplication in 3.588 seconds (process running for 3.909)
+2026-08-03T12:50:20.881Z  INFO 30625 --- [temperaturyapi] [http-nio-3000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-03T12:50:20.882Z  INFO 30625 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-03T12:50:20.883Z  INFO 30625 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-03T12:50:21.076Z  INFO 30625 --- [temperaturyapi] [http-nio-3000-exec-1] c.e.t.controller.PomiarController        : Próba dodania pomiaru: 133.0
+2026-08-03T12:50:21.077Z  WARN 30625 --- [temperaturyapi] [http-nio-3000-exec-1] c.e.t.controller.PomiarController        : Odrzucono nieprawidłową temperaturę: 133.0
+2026-08-03T12:52:45.611Z  INFO 30625 --- [temperaturyapi] [http-nio-3000-exec-2] c.e.t.controller.PomiarController        : Próba dodania pomiaru: 13.0
+2026-08-03T12:52:45.714Z  INFO 30625 --- [temperaturyapi] [http-nio-3000-exec-2] c.e.t.controller.PomiarController        : Pomiar zapisany do bazy danych. ID: 178
+2026-08-05T05:42:50.668Z  INFO 6779 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Starting TemperaturyapiApplication using Java 25.0.2 with PID 6779 (/workspaces/temperaturyapi/temperaturyapi/target/classes started by codespace in /workspaces/temperaturyapi/temperaturyapi)
+2026-08-05T05:42:50.671Z  INFO 6779 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-08-05T05:42:51.586Z  INFO 6779 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-05T05:42:51.621Z  INFO 6779 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interface.
+2026-08-05T05:42:52.023Z  INFO 6779 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 3000 (http)
+2026-08-05T05:42:52.190Z  INFO 6779 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-05T05:42:52.192Z  INFO 6779 --- [temperaturyapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-08-05T05:42:52.268Z  INFO 6779 --- [temperaturyapi] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1547 ms
+2026-08-05T05:42:52.423Z  INFO 6779 --- [temperaturyapi] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-05T05:42:52.612Z  INFO 6779 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-08-05T05:42:53.009Z  INFO 6779 --- [temperaturyapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-05T05:42:53.086Z  INFO 6779 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-05T05:42:53.607Z  INFO 6779 --- [temperaturyapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@be616f0
+2026-08-05T05:42:53.608Z  INFO 6779 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-05T05:42:53.662Z  WARN 6779 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.62 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-08-05T05:42:53.687Z  INFO 6779 --- [temperaturyapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://sql7.freesqldatabase.com:3306/sql7762232?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.62
+	Default catalog/schema: sql7762232/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-05T05:42:54.510Z  INFO 6779 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-05T05:42:54.605Z  INFO 6779 --- [temperaturyapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05T05:42:54.681Z  INFO 6779 --- [temperaturyapi] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-05T05:42:54.763Z  WARN 6779 --- [temperaturyapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-05T05:42:54.780Z  INFO 6779 --- [temperaturyapi] [main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-08-05T05:42:55.125Z  INFO 6779 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 3000 (http) with context path '/'
+2026-08-05T05:42:55.129Z  INFO 6779 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Started TemperaturyapiApplication in 5.378 seconds (process running for 5.833)
+2026-08-05T05:43:03.371Z  INFO 6779 --- [temperaturyapi] [http-nio-3000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-05T05:43:03.371Z  INFO 6779 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-05T05:43:03.373Z  INFO 6779 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-05T05:43:10.573Z  INFO 6779 --- [temperaturyapi] [http-nio-3000-exec-3] c.e.t.controller.PomiarController        : Pobrano listę pomiarów.
+2026-08-05T05:44:56.076Z  INFO 6779 --- [temperaturyapi] [http-nio-3000-exec-7] c.e.t.controller.PomiarController        : Pobrano listę pomiarów.
+2026-08-05T05:46:21.067Z  WARN 6779 --- [temperaturyapi] [http-nio-3000-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'curl': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2026-08-05T05:50:28.830Z  INFO 6779 --- [temperaturyapi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-05T05:50:28.836Z  INFO 6779 --- [temperaturyapi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-05T05:50:28.839Z  INFO 6779 --- [temperaturyapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05T05:50:28.842Z  INFO 6779 --- [temperaturyapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-05T05:50:28.847Z  INFO 6779 --- [temperaturyapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-05T05:50:36.709Z  INFO 11642 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Starting TemperaturyapiApplication using Java 25.0.2 with PID 11642 (/workspaces/temperaturyapi/temperaturyapi/target/classes started by codespace in /workspaces/temperaturyapi/temperaturyapi)
+2026-08-05T05:50:36.712Z  INFO 11642 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-08-05T05:50:37.427Z  INFO 11642 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-05T05:50:37.474Z  INFO 11642 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interface.
+2026-08-05T05:50:37.877Z  INFO 11642 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 3000 (http)
+2026-08-05T05:50:37.890Z  INFO 11642 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-05T05:50:37.891Z  INFO 11642 --- [temperaturyapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-08-05T05:50:37.930Z  INFO 11642 --- [temperaturyapi] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1149 ms
+2026-08-05T05:50:38.085Z  INFO 11642 --- [temperaturyapi] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-05T05:50:38.119Z  INFO 11642 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-08-05T05:50:38.556Z  INFO 11642 --- [temperaturyapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-05T05:50:38.582Z  INFO 11642 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-05T05:50:38.893Z  INFO 11642 --- [temperaturyapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70ee1963
+2026-08-05T05:50:38.895Z  INFO 11642 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-05T05:50:38.946Z  WARN 11642 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.62 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-08-05T05:50:38.972Z  INFO 11642 --- [temperaturyapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://sql7.freesqldatabase.com:3306/sql7762232?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.62
+	Default catalog/schema: sql7762232/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-05T05:50:39.544Z  INFO 11642 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-05T05:50:39.634Z  INFO 11642 --- [temperaturyapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05T05:50:39.713Z  INFO 11642 --- [temperaturyapi] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-05T05:50:39.809Z  WARN 11642 --- [temperaturyapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-05T05:50:39.825Z  INFO 11642 --- [temperaturyapi] [main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-08-05T05:50:40.202Z  INFO 11642 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 3000 (http) with context path '/'
+2026-08-05T05:50:40.207Z  INFO 11642 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Started TemperaturyapiApplication in 3.995 seconds (process running for 4.388)
+2026-08-05T05:50:49.653Z  INFO 11642 --- [temperaturyapi] [http-nio-3000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-05T05:50:49.660Z  INFO 11642 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-05T05:50:49.664Z  INFO 11642 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-05T05:54:07.917Z  INFO 11642 --- [temperaturyapi] [http-nio-3000-exec-3] c.e.t.controller.PomiarController        : Próba dodania pomiaru: 29.0
+2026-08-05T05:54:08.028Z  INFO 11642 --- [temperaturyapi] [http-nio-3000-exec-3] c.e.t.controller.PomiarController        : Pomiar zapisany do bazy danych. ID: 179
+2026-08-05T05:54:26.425Z  INFO 11642 --- [temperaturyapi] [http-nio-3000-exec-4] c.e.t.controller.PomiarController        : Próba dodania pomiaru: 39.0
+2026-08-05T05:54:26.478Z  INFO 11642 --- [temperaturyapi] [http-nio-3000-exec-4] c.e.t.controller.PomiarController        : Pomiar zapisany do bazy danych. ID: 180
+2026-08-05T05:56:35.996Z  INFO 11642 --- [temperaturyapi] [http-nio-3000-exec-5] c.e.t.controller.PomiarController        : Pobrano listę pomiarów.
+2026-08-05T06:03:45.007Z  WARN 11642 --- [temperaturyapi] [http-nio-3000-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-08-05T06:06:50.405Z  INFO 11642 --- [temperaturyapi] [http-nio-3000-exec-1] c.e.t.controller.PomiarController        : Pobrano listę pomiarów.
+2026-08-05T06:07:54.880Z  WARN 11642 --- [temperaturyapi] [http-nio-3000-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-08-05T06:08:16.940Z  INFO 11642 --- [temperaturyapi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-05T06:08:16.944Z  INFO 11642 --- [temperaturyapi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-05T06:08:16.947Z  INFO 11642 --- [temperaturyapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05T06:08:16.951Z  INFO 11642 --- [temperaturyapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-05T06:08:16.959Z  INFO 11642 --- [temperaturyapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-05T06:08:25.195Z  INFO 19786 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Starting TemperaturyapiApplication using Java 25.0.2 with PID 19786 (/workspaces/temperaturyapi/temperaturyapi/target/classes started by codespace in /workspaces/temperaturyapi/temperaturyapi)
+2026-08-05T06:08:25.198Z  INFO 19786 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-08-05T06:08:25.972Z  INFO 19786 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-05T06:08:26.011Z  INFO 19786 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interface.
+2026-08-05T06:08:26.407Z  INFO 19786 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 3000 (http)
+2026-08-05T06:08:26.420Z  INFO 19786 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-05T06:08:26.421Z  INFO 19786 --- [temperaturyapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-08-05T06:08:26.456Z  INFO 19786 --- [temperaturyapi] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1154 ms
+2026-08-05T06:08:26.615Z  INFO 19786 --- [temperaturyapi] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-05T06:08:26.650Z  INFO 19786 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-08-05T06:08:26.988Z  INFO 19786 --- [temperaturyapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-05T06:08:27.022Z  INFO 19786 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-05T06:08:27.358Z  INFO 19786 --- [temperaturyapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78f5cbc5
+2026-08-05T06:08:27.360Z  INFO 19786 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-05T06:08:27.411Z  WARN 19786 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.62 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-08-05T06:08:27.438Z  INFO 19786 --- [temperaturyapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://sql7.freesqldatabase.com:3306/sql7762232?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.62
+	Default catalog/schema: sql7762232/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-05T06:08:28.032Z  INFO 19786 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-05T06:08:28.130Z  INFO 19786 --- [temperaturyapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05T06:08:28.200Z  INFO 19786 --- [temperaturyapi] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-05T06:08:28.296Z  WARN 19786 --- [temperaturyapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-05T06:08:28.315Z  INFO 19786 --- [temperaturyapi] [main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-08-05T06:08:28.549Z  INFO 19786 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 3000 (http) with context path '/'
+2026-08-05T06:08:28.554Z  INFO 19786 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Started TemperaturyapiApplication in 3.752 seconds (process running for 4.25)
+2026-08-05T06:08:31.943Z  INFO 19786 --- [temperaturyapi] [http-nio-3000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-05T06:08:31.944Z  INFO 19786 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-05T06:08:31.945Z  INFO 19786 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-05T06:08:37.499Z  INFO 19786 --- [temperaturyapi] [http-nio-3000-exec-2] c.e.t.controller.PomiarController        : Próba dodania pomiaru: 11.0
+2026-08-05T06:08:37.610Z  INFO 19786 --- [temperaturyapi] [http-nio-3000-exec-2] c.e.t.controller.PomiarController        : Pomiar zapisany do bazy danych. ID: 181
+2026-08-05T06:55:17.779Z  INFO 3279 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Starting TemperaturyapiApplication using Java 25.0.2 with PID 3279 (/workspaces/temperaturyapi/temperaturyapi/target/classes started by codespace in /workspaces/temperaturyapi/temperaturyapi)
+2026-08-05T06:55:18.033Z  INFO 3279 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-08-05T06:55:20.179Z  INFO 3279 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-05T06:55:20.223Z  INFO 3279 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interface.
+2026-08-05T06:55:20.943Z  INFO 3279 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 3000 (http)
+2026-08-05T06:55:21.124Z  INFO 3279 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-05T06:55:21.125Z  INFO 3279 --- [temperaturyapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-08-05T06:55:21.197Z  INFO 3279 --- [temperaturyapi] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3095 ms
+2026-08-05T06:55:21.611Z  INFO 3279 --- [temperaturyapi] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-05T06:55:21.739Z  INFO 3279 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-08-05T06:55:22.631Z  INFO 3279 --- [temperaturyapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-05T06:55:22.666Z  INFO 3279 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-05T06:55:23.061Z  INFO 3279 --- [temperaturyapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78f5cbc5
+2026-08-05T06:55:23.063Z  INFO 3279 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-05T06:55:23.127Z  WARN 3279 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.62 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-08-05T06:55:23.155Z  INFO 3279 --- [temperaturyapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://sql7.freesqldatabase.com:3306/sql7762232?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.62
+	Default catalog/schema: sql7762232/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-05T06:55:23.792Z  INFO 3279 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-05T06:55:23.889Z  INFO 3279 --- [temperaturyapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05T06:55:23.979Z  INFO 3279 --- [temperaturyapi] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-05T06:55:24.108Z  WARN 3279 --- [temperaturyapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-05T06:55:24.126Z  INFO 3279 --- [temperaturyapi] [main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-08-05T06:55:24.367Z  INFO 3279 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 3000 (http) with context path '/'
+2026-08-05T06:55:24.373Z  INFO 3279 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Started TemperaturyapiApplication in 7.416 seconds (process running for 7.866)
+2026-08-05T06:55:36.969Z  INFO 3279 --- [temperaturyapi] [http-nio-3000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-05T06:55:36.970Z  INFO 3279 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-05T06:55:36.973Z  INFO 3279 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-05T06:55:40.584Z  INFO 3279 --- [temperaturyapi] [http-nio-3000-exec-2] c.e.t.controller.PomiarController        : Próba dodania pomiaru: 18.0
+2026-08-05T06:55:40.694Z  INFO 3279 --- [temperaturyapi] [http-nio-3000-exec-2] c.e.t.controller.PomiarController        : Pomiar zapisany do bazy danych. ID: 182
+2026-08-05T06:56:00.771Z  INFO 3279 --- [temperaturyapi] [http-nio-3000-exec-3] c.e.t.controller.PomiarController        : Próba dodania pomiaru: 150.0
+2026-08-05T06:56:00.772Z  WARN 3279 --- [temperaturyapi] [http-nio-3000-exec-3] c.e.t.controller.PomiarController        : Odrzucono nieprawidłową temperaturę: 150.0
+2026-08-05T07:25:01.204Z  INFO 3279 --- [temperaturyapi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-05T07:25:01.209Z  INFO 3279 --- [temperaturyapi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-05T07:25:01.212Z  INFO 3279 --- [temperaturyapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05T07:25:01.214Z  INFO 3279 --- [temperaturyapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-05T07:25:01.217Z  INFO 3279 --- [temperaturyapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-05T07:25:10.731Z  INFO 15926 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Starting TemperaturyapiApplication using Java 25.0.2 with PID 15926 (/workspaces/temperaturyapi/temperaturyapi/target/classes started by codespace in /workspaces/temperaturyapi/temperaturyapi)
+2026-08-05T07:25:10.734Z  INFO 15926 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-08-05T07:25:11.419Z  INFO 15926 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-05T07:25:11.468Z  INFO 15926 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interface.
+2026-08-05T07:25:11.873Z  INFO 15926 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 3000 (http)
+2026-08-05T07:25:11.885Z  INFO 15926 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-05T07:25:11.885Z  INFO 15926 --- [temperaturyapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-08-05T07:25:11.916Z  INFO 15926 --- [temperaturyapi] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1099 ms
+2026-08-05T07:25:12.083Z  INFO 15926 --- [temperaturyapi] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-05T07:25:12.116Z  INFO 15926 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-08-05T07:25:12.474Z  INFO 15926 --- [temperaturyapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-05T07:25:12.501Z  INFO 15926 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-05T07:25:12.731Z  INFO 15926 --- [temperaturyapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70ee1963
+2026-08-05T07:25:12.733Z  INFO 15926 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-05T07:25:12.780Z  WARN 15926 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.62 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-08-05T07:25:12.805Z  INFO 15926 --- [temperaturyapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://sql7.freesqldatabase.com:3306/sql7762232?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.62
+	Default catalog/schema: sql7762232/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-05T07:25:13.819Z  INFO 15926 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-05T07:25:13.911Z  INFO 15926 --- [temperaturyapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05T07:25:13.978Z  INFO 15926 --- [temperaturyapi] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-05T07:25:14.075Z  WARN 15926 --- [temperaturyapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-05T07:25:14.091Z  INFO 15926 --- [temperaturyapi] [main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-08-05T07:25:14.314Z  INFO 15926 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 3000 (http) with context path '/'
+2026-08-05T07:25:14.319Z  INFO 15926 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Started TemperaturyapiApplication in 4.003 seconds (process running for 4.495)
+2026-08-05T07:31:46.032Z  INFO 15926 --- [temperaturyapi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-05T07:31:46.034Z  INFO 15926 --- [temperaturyapi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-05T07:31:46.038Z  INFO 15926 --- [temperaturyapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05T07:31:46.041Z  INFO 15926 --- [temperaturyapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-05T07:31:46.047Z  INFO 15926 --- [temperaturyapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-05T07:31:54.416Z  INFO 18961 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Starting TemperaturyapiApplication using Java 25.0.2 with PID 18961 (/workspaces/temperaturyapi/temperaturyapi/target/classes started by codespace in /workspaces/temperaturyapi/temperaturyapi)
+2026-08-05T07:31:54.425Z  INFO 18961 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-08-05T07:31:55.284Z  INFO 18961 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-05T07:31:55.330Z  INFO 18961 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interface.
+2026-08-05T07:31:55.759Z  INFO 18961 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 3000 (http)
+2026-08-05T07:31:55.772Z  INFO 18961 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-05T07:31:55.772Z  INFO 18961 --- [temperaturyapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-08-05T07:31:55.806Z  INFO 18961 --- [temperaturyapi] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1222 ms
+2026-08-05T07:31:55.948Z  INFO 18961 --- [temperaturyapi] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-05T07:31:55.982Z  INFO 18961 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-08-05T07:31:56.340Z  INFO 18961 --- [temperaturyapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-05T07:31:56.372Z  INFO 18961 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-05T07:31:56.612Z  INFO 18961 --- [temperaturyapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70ee1963
+2026-08-05T07:31:56.613Z  INFO 18961 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-05T07:31:56.662Z  WARN 18961 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.62 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-08-05T07:31:56.687Z  INFO 18961 --- [temperaturyapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://sql7.freesqldatabase.com:3306/sql7762232?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.62
+	Default catalog/schema: sql7762232/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-05T07:31:57.280Z  INFO 18961 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-05T07:31:57.372Z  INFO 18961 --- [temperaturyapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05T07:31:57.453Z  INFO 18961 --- [temperaturyapi] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-05T07:31:57.551Z  WARN 18961 --- [temperaturyapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-05T07:31:57.570Z  INFO 18961 --- [temperaturyapi] [main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-08-05T07:31:57.803Z  INFO 18961 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 3000 (http) with context path '/'
+2026-08-05T07:31:57.809Z  INFO 18961 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Started TemperaturyapiApplication in 3.882 seconds (process running for 4.347)
+2026-08-05T07:32:07.577Z  INFO 18961 --- [temperaturyapi] [http-nio-3000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-05T07:32:07.578Z  INFO 18961 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-05T07:32:07.580Z  INFO 18961 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-05T07:32:07.666Z  WARN 18961 --- [temperaturyapi] [http-nio-3000-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-API-Key' for method parameter type String is not present]
+2026-08-05T07:32:59.556Z  WARN 18961 --- [temperaturyapi] [http-nio-3000-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-API-Key' for method parameter type String is not present]
+2026-08-05T07:34:13.289Z  INFO 18961 --- [temperaturyapi] [http-nio-3000-exec-3] c.e.t.controller.PomiarController        : Próba dodania pomiaru: 29.0
+2026-08-05T07:34:13.289Z  WARN 18961 --- [temperaturyapi] [http-nio-3000-exec-3] c.e.t.controller.PomiarController        : Niepoprawny klucz API
+2026-08-05T07:34:57.469Z  INFO 18961 --- [temperaturyapi] [http-nio-3000-exec-4] c.e.t.controller.PomiarController        : Próba dodania pomiaru: 29.0
+2026-08-05T07:34:57.577Z  INFO 18961 --- [temperaturyapi] [http-nio-3000-exec-4] c.e.t.controller.PomiarController        : Pomiar zapisany do bazy danych. ID: 183
+2026-08-05T07:35:13.390Z  WARN 18961 --- [temperaturyapi] [http-nio-3000-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-API-Key' for method parameter type String is not present]
+2026-08-05T07:42:01.070Z  INFO 18961 --- [temperaturyapi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-05T07:42:01.073Z  INFO 18961 --- [temperaturyapi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-05T07:42:01.076Z  INFO 18961 --- [temperaturyapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05T07:42:01.080Z  INFO 18961 --- [temperaturyapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-05T07:42:01.087Z  INFO 18961 --- [temperaturyapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-05T07:42:09.177Z  INFO 24449 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Starting TemperaturyapiApplication using Java 25.0.2 with PID 24449 (/workspaces/temperaturyapi/temperaturyapi/target/classes started by codespace in /workspaces/temperaturyapi/temperaturyapi)
+2026-08-05T07:42:09.184Z  INFO 24449 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-08-05T07:42:10.026Z  INFO 24449 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-05T07:42:10.067Z  INFO 24449 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interface.
+2026-08-05T07:42:10.565Z  INFO 24449 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 3000 (http)
+2026-08-05T07:42:10.579Z  INFO 24449 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-05T07:42:10.579Z  INFO 24449 --- [temperaturyapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-08-05T07:42:10.616Z  INFO 24449 --- [temperaturyapi] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1235 ms
+2026-08-05T07:42:10.788Z  INFO 24449 --- [temperaturyapi] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-05T07:42:10.821Z  INFO 24449 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-08-05T07:42:11.158Z  INFO 24449 --- [temperaturyapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-05T07:42:11.197Z  INFO 24449 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-05T07:42:11.527Z  INFO 24449 --- [temperaturyapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70ee1963
+2026-08-05T07:42:11.529Z  INFO 24449 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-05T07:42:11.581Z  WARN 24449 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.62 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-08-05T07:42:11.606Z  INFO 24449 --- [temperaturyapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://sql7.freesqldatabase.com:3306/sql7762232?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.62
+	Default catalog/schema: sql7762232/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-05T07:42:12.241Z  INFO 24449 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-05T07:42:12.343Z  INFO 24449 --- [temperaturyapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05T07:42:12.424Z  INFO 24449 --- [temperaturyapi] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-05T07:42:12.526Z  WARN 24449 --- [temperaturyapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-05T07:42:12.542Z  INFO 24449 --- [temperaturyapi] [main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-08-05T07:42:12.786Z  INFO 24449 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 3000 (http) with context path '/'
+2026-08-05T07:42:12.792Z  INFO 24449 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Started TemperaturyapiApplication in 4.119 seconds (process running for 4.511)
+2026-08-05T07:42:15.246Z  INFO 24449 --- [temperaturyapi] [http-nio-3000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-05T07:42:15.247Z  INFO 24449 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-05T07:42:15.248Z  INFO 24449 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-05T07:42:34.268Z  INFO 24449 --- [temperaturyapi] [http-nio-3000-exec-2] c.e.t.controller.PomiarController        : Próba dodania pomiaru: 16.0
+2026-08-05T07:42:34.377Z  INFO 24449 --- [temperaturyapi] [http-nio-3000-exec-2] c.e.t.controller.PomiarController        : Pomiar zapisany do bazy danych. ID: 184
+2026-08-05T10:07:09.563Z  INFO 31831 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Starting TemperaturyapiApplication using Java 25.0.2 with PID 31831 (/workspaces/temperaturyapi/temperaturyapi/target/classes started by codespace in /workspaces/temperaturyapi/temperaturyapi)
+2026-08-05T10:07:09.575Z  INFO 31831 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-08-05T10:07:10.423Z  INFO 31831 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-05T10:07:10.463Z  INFO 31831 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interface.
+2026-08-05T10:07:11.016Z  INFO 31831 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 3000 (http)
+2026-08-05T10:07:11.032Z  INFO 31831 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-05T10:07:11.032Z  INFO 31831 --- [temperaturyapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-08-05T10:07:11.079Z  INFO 31831 --- [temperaturyapi] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1416 ms
+2026-08-05T10:07:11.285Z  INFO 31831 --- [temperaturyapi] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-05T10:07:11.356Z  INFO 31831 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-08-05T10:07:11.856Z  INFO 31831 --- [temperaturyapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-05T10:07:11.900Z  INFO 31831 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-05T10:07:12.196Z  INFO 31831 --- [temperaturyapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49d543a9
+2026-08-05T10:07:12.198Z  INFO 31831 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-05T10:07:12.254Z  WARN 31831 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.62 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-08-05T10:07:12.278Z  INFO 31831 --- [temperaturyapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://sql7.freesqldatabase.com:3306/sql7762232?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.62
+	Default catalog/schema: sql7762232/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-05T10:07:13.140Z  INFO 31831 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-05T10:07:13.222Z  INFO 31831 --- [temperaturyapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05T10:07:13.290Z  INFO 31831 --- [temperaturyapi] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-05T10:07:13.397Z  WARN 31831 --- [temperaturyapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-05T10:07:13.412Z  INFO 31831 --- [temperaturyapi] [main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-08-05T10:07:13.696Z  INFO 31831 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 3000 (http) with context path '/'
+2026-08-05T10:07:13.719Z  INFO 31831 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Started TemperaturyapiApplication in 4.619 seconds (process running for 5.349)
+2026-08-05T10:07:23.167Z  INFO 31831 --- [temperaturyapi] [http-nio-3000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-05T10:07:23.168Z  INFO 31831 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-05T10:07:23.170Z  INFO 31831 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-05T10:07:29.636Z  INFO 31831 --- [temperaturyapi] [http-nio-3000-exec-2] c.e.t.controller.PomiarController        : Próba dodania pomiaru: 19.0
+2026-08-05T10:07:29.636Z  WARN 31831 --- [temperaturyapi] [http-nio-3000-exec-2] c.e.t.controller.PomiarController        : Niepoprawny klucz API
+2026-08-05T10:07:52.146Z  INFO 31831 --- [temperaturyapi] [http-nio-3000-exec-3] c.e.t.controller.PomiarController        : Próba dodania pomiaru: 19.0
+2026-08-05T10:07:52.249Z  INFO 31831 --- [temperaturyapi] [http-nio-3000-exec-3] c.e.t.controller.PomiarController        : Pomiar zapisany do bazy danych. ID: 185
+2026-08-05T10:08:31.951Z  INFO 31831 --- [temperaturyapi] [http-nio-3000-exec-6] c.e.t.controller.PomiarController        : Pobrano listę pomiarów.
+2026-08-05T10:17:41.897Z  INFO 31831 --- [temperaturyapi] [http-nio-3000-exec-9] c.e.t.controller.PomiarController        : Próba dodania pomiaru: 22.0
+2026-08-05T10:17:41.944Z  INFO 31831 --- [temperaturyapi] [http-nio-3000-exec-9] c.e.t.controller.PomiarController        : Pomiar zapisany do bazy danych. ID: 186
+2026-08-05T10:17:45.042Z  INFO 31831 --- [temperaturyapi] [http-nio-3000-exec-10] c.e.t.controller.PomiarController        : Próba dodania pomiaru: 22.0
+2026-08-05T10:17:45.088Z  INFO 31831 --- [temperaturyapi] [http-nio-3000-exec-10] c.e.t.controller.PomiarController        : Pomiar zapisany do bazy danych. ID: 187
+2026-08-05T10:17:58.749Z  INFO 31831 --- [temperaturyapi] [http-nio-3000-exec-1] c.e.t.controller.PomiarController        : Próba dodania pomiaru: 22.0
+2026-08-05T10:17:58.798Z  INFO 31831 --- [temperaturyapi] [http-nio-3000-exec-1] c.e.t.controller.PomiarController        : Pomiar zapisany do bazy danych. ID: 188
+2026-08-05T10:18:29.483Z  INFO 31831 --- [temperaturyapi] [http-nio-3000-exec-2] c.e.t.controller.PomiarController        : Próba dodania pomiaru: 23.0
+2026-08-05T10:18:29.530Z  INFO 31831 --- [temperaturyapi] [http-nio-3000-exec-2] c.e.t.controller.PomiarController        : Pomiar zapisany do bazy danych. ID: 189
+2026-08-05T10:19:30.840Z  WARN 31831 --- [temperaturyapi] [http-nio-3000-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-API-Key' for method parameter type String is not present]
+2026-08-05T10:20:39.607Z  WARN 31831 --- [temperaturyapi] [http-nio-3000-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-API-Key' for method parameter type String is not present]
+2026-08-05T10:24:09.173Z  WARN 31831 --- [temperaturyapi] [http-nio-3000-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-API-Key' for method parameter type String is not present]
+2026-08-05T10:26:48.418Z  WARN 31831 --- [temperaturyapi] [http-nio-3000-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-API-Key' for method parameter type String is not present]
+2026-08-05T10:27:12.366Z  WARN 31831 --- [temperaturyapi] [http-nio-3000-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingRequestHeaderException: Required request header 'X-API-Key' for method parameter type String is not present]
+2026-08-05T10:27:35.646Z  INFO 31831 --- [temperaturyapi] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-05T10:27:35.650Z  INFO 31831 --- [temperaturyapi] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-05T10:27:35.653Z  INFO 31831 --- [temperaturyapi] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05T10:27:35.655Z  INFO 31831 --- [temperaturyapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-05T10:27:35.661Z  INFO 31831 --- [temperaturyapi] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-05T10:27:48.952Z  INFO 42359 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Starting TemperaturyapiApplication using Java 25.0.2 with PID 42359 (/workspaces/temperaturyapi/temperaturyapi/target/classes started by codespace in /workspaces/temperaturyapi/temperaturyapi)
+2026-08-05T10:27:48.956Z  INFO 42359 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-08-05T10:27:49.618Z  INFO 42359 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-05T10:27:49.658Z  INFO 42359 --- [temperaturyapi] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interface.
+2026-08-05T10:27:50.068Z  INFO 42359 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 3000 (http)
+2026-08-05T10:27:50.080Z  INFO 42359 --- [temperaturyapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-05T10:27:50.081Z  INFO 42359 --- [temperaturyapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-08-05T10:27:50.125Z  INFO 42359 --- [temperaturyapi] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1051 ms
+2026-08-05T10:27:50.302Z  INFO 42359 --- [temperaturyapi] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-05T10:27:50.338Z  INFO 42359 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-08-05T10:27:50.675Z  INFO 42359 --- [temperaturyapi] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-05T10:27:50.714Z  INFO 42359 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-05T10:27:50.909Z  INFO 42359 --- [temperaturyapi] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49d543a9
+2026-08-05T10:27:50.910Z  INFO 42359 --- [temperaturyapi] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-05T10:27:50.956Z  WARN 42359 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.62 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-08-05T10:27:50.977Z  INFO 42359 --- [temperaturyapi] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://sql7.freesqldatabase.com:3306/sql7762232?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.62
+	Default catalog/schema: sql7762232/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-05T10:27:51.643Z  INFO 42359 --- [temperaturyapi] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-05T10:27:51.745Z  INFO 42359 --- [temperaturyapi] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-05T10:27:51.813Z  INFO 42359 --- [temperaturyapi] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-05T10:27:51.935Z  WARN 42359 --- [temperaturyapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-05T10:27:51.961Z  INFO 42359 --- [temperaturyapi] [main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-08-05T10:27:52.205Z  INFO 42359 --- [temperaturyapi] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 3000 (http) with context path '/'
+2026-08-05T10:27:52.210Z  INFO 42359 --- [temperaturyapi] [main] c.e.t.TemperaturyapiApplication          : Started TemperaturyapiApplication in 3.688 seconds (process running for 4.127)
+2026-08-05T10:27:57.053Z  INFO 42359 --- [temperaturyapi] [http-nio-3000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-05T10:27:57.054Z  INFO 42359 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-05T10:27:57.056Z  INFO 42359 --- [temperaturyapi] [http-nio-3000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
